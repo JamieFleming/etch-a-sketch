@@ -42,12 +42,12 @@ function makeGrid() {
     const container = document.querySelector(".container");
     container.innerHTML = "";
 
-    if (number <= 1 || number > 99 || isNaN(number)) {
-        promptText.textContent = "Make sure it is a number between 2 and 99!";
+    if (number < 2 || number > 99 || isNaN(number)) {
+        promptText.textContent = "Default Grid Active! 16 x 16";
         number = 16;
     }
 
-    const squareSize = 600 / number; //600px, so dynamic sizing
+    const squareSize = (600 - 10) / number; //600px so dynamic sizing
 
         for (let i = 0; i < number * number; i++) {
             const square = document.createElement("div");

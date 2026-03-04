@@ -80,10 +80,12 @@ main {
     width: 600px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     border: 5px solid blue;
+    box-sizing: border-box;
 }
 
 .square {
+    /* flex: none; */
+    box-sizing: border-box;
     border: 1px solid #ddd;
 }
